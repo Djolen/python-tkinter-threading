@@ -54,7 +54,7 @@ def arkTred():
         mojCanvas.create_arc((150, 150, 250, 250), start=extent, extent=0)
         #drugiKrug = mojCanvas.create_arc((150, 150, 250, 250), start=180, extent=extent2, fill="blue", outline="blue")
         extent += 1
-        extent2 -= 1
+        #extent2 -= 1
         if extent == 180:
             extent = 0
         time.sleep(0.00002)
