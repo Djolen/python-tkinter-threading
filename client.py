@@ -47,11 +47,14 @@ radioUgasi.pack()
 
 def arkTred():
     extent = 1
-    while True:
+    extent2 = 1
+    while True and extent2 != -180:
         mojCanvas.delete(ALL)
-        mojCanvas.create_arc((150, 150, 250, 250), start=0, extent=180, fill="red")
+        prviKrug = mojCanvas.create_arc((150, 150, 250, 250), start=0, extent=180, fill="red", outline="blue")
         mojCanvas.create_arc((150, 150, 250, 250), start=extent, extent=0)
+        #drugiKrug = mojCanvas.create_arc((150, 150, 250, 250), start=180, extent=extent2, fill="blue", outline="blue")
         extent += 1
+        extent2 -= 1
         if extent == 180:
             extent = 0
         time.sleep(0.00002)
